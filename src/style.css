@@ -1,0 +1,161 @@
+:root{
+    --text-color-1: #f2f2f2;
+    --primary-brand-color: #1d69ab;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Neuton', serif;
+}
+body{
+    height: 1000px;
+}
+/* Navbar section */
+
+.nav-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 60px;
+    background: var(--primary-brand-color);
+    position: fixed;
+    top: 0;
+}
+
+.desk ul{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.desk ul li{
+    list-style: none;
+    padding: 20px;
+}
+.desk ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text-color-1);
+}
+
+.logo{
+    padding: 20px;
+    color: var(--text-color-1);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.mob{
+    background: var(--primary-brand-color);
+    display: none;
+}
+.mob ul{
+    display: none;
+}
+.mob ul li{
+    list-style: none;
+    text-align: center;
+    padding-top: 20px;
+}
+.mob ul li:last-child{
+    margin-bottom: 20px;
+}
+.mob ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text-color-1);
+}
+.nav-icon-wrap .fa-times, .nav-icon-wrap .fa-bars{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    color: var(--text-color-1);
+    cursor: pointer;
+}
+
+/* Header section */
+
+.header-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-brand-color);
+    height: auto;
+}
+.header-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+}
+.header-content h1{
+    font-size: 3rem;
+    color: var(--text-color-1);
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 8rem;
+}
+.header-content p{
+    color: var(--text-color-1);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    text-align: center;
+}
+.play-icon a{
+    text-decoration: none;
+    color: var(--text-color-1);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.play-icon a > div{
+    margin-right: 1rem;
+}
+.play-icon a:last-child{
+    margin-top: 8px;
+}
+.fa-play-circle{
+    font-size: 3rem;
+    padding-top: 20px;
+}
+.header-wave{
+    width: 100%;
+}
+
+
+@media(max-width: 700px){
+
+    /* Navbar section */
+
+    .desk{
+        display: none;
+    }
+    .nav-container{
+        grid-template-columns: 1fr;
+        border-bottom: 2px solid #333;
+    }
+
+    .mob{
+        display: block;
+    }
+
+    /* show-nav and show-hr classes are added by jQuery */
+    .mob ul.show-nav{
+        display: block;
+    }
+
+    /* Header section */
+    .header-content h1{
+        margin-top: 5rem;
+    }
+}

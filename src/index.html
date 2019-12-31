@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/f494066f73.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Neuton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Digital Partner</title>
+</head>
+<body>
+
+    <!-- Navbar section -->
+
+    <div class="nav-container">
+        <div class="logo">
+            Digital
+        </div>
+        <div class="desk">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        
+        <div class="mob">
+            <div class="nav-icon-wrap">
+                <i class="fas fa-times"></i>
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Header section -->
+
+    <section class="header-section">
+        <div class="header-content">
+            <h1>Best Digital Agency</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea possimus adipisci sequi explicabo blanditiis libero necessitatibus ut itaque cumque architecto! Vero porro facere dolorem cupiditate.</p>
+            <div class="play-icon">
+                <a href="">
+                    <div>
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                    <div>
+                        Watch Demo
+                    </div>
+                </a>
+            </div>
+        </div>
+        <img class="header-wave" src="../img/white-wave-1.png" alt="">
+    </section>
+
+
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".nav-icon-wrap .fa-times").hide();
+
+            $(".nav-icon-wrap .fa-bars").click(function(){
+                $(this).hide();
+                $(".nav-icon-wrap .fa-times").show();
+                $(".mob ul").addClass("show-nav");
+            })
+
+            $(".nav-icon-wrap .fa-times").click(function(){
+                $(this).hide();
+                $(".nav-icon-wrap .fa-bars").show();
+                $(".mob ul").removeClass("show-nav");
+            })
+        })
+    </script>
+</body>
+</html>
