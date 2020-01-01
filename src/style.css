@@ -283,6 +283,27 @@ body{
     object-fit: scale-down;
 }
 
+/* Media section */
+
+.media-section{
+    background: #FEF9FF;
+    padding-bottom: 3rem;
+}
+.media-section h1{
+    text-align: center;
+    margin: 3rem 0 3rem 0;
+    padding-top: 3rem;
+    text-transform: uppercase;
+}
+.media-wrap{
+    text-align: center;
+}
+.fa-facebook, .fa-linkedin, .fa-twitter, .fa-youtube{
+    font-size: 2.5rem;
+    color: var(--primary-brand-color);
+    margin-left: 1rem;
+}
+
 
 @media(max-width: 700px){
 
