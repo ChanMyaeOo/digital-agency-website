@@ -39,13 +39,16 @@ body{
     text-transform: uppercase;
     color: var(--text-color-1);
 }
-
 .logo{
     padding: 20px;
     color: var(--text-color-1);
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 3px;
+}
+.logo a{
+    text-decoration: none;
+    color: var(--text-color-1);
 }
 .mob{
     background: var(--primary-brand-color);
@@ -196,6 +199,47 @@ body{
     text-align: center
 }
 
+/* About section */
+
+.about-section{
+    width: 100%;
+    margin: auto;
+    background: #FEF9FF;
+}
+.about-section h1{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding-top: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.about-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-content p{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.about-content ul li{
+    line-height: 1.6;
+    list-style-type: square;
+}
+.about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-img img{
+    width: 350px;
+}
+
 
 @media(max-width: 700px){
 
@@ -226,5 +270,17 @@ body{
     /* Service section */
     .service-container{
         display: block;
+    }
+
+    /* About section */
+    .about-container{
+        grid-template-columns: 1fr;
+    }
+    .about-content{
+        order: 2;
+    }
+    .about-img{
+        order: 1;
+        margin-bottom: 1.5rem;
     }
 }
